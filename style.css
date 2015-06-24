@@ -68,6 +68,16 @@ body.admin-bar a.button-collapse.top-nav {
 	top: 30px;
 }
 
+@media only screen and (max-width: 782px) {
+	body.admin-bar #header .side-nav.fixed {
+		top: 46px;
+	}
+	
+	body.admin-bar a.button-collapse.top-nav {
+		top: 46px;
+	}
+}
+
 @media only screen and (max-width: 992px) {
 	#header, #main, #footer {
 		padding-left: 0;
