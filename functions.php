@@ -4,11 +4,18 @@ define( 'WOOGLE_VERSION', '1.0.0' );
 
 function woogle_scripts() {
 	$theme_directory = get_template_directory_uri();
+	// jQuery
+	if ( ! is_admin() ) {
+		wp_deregister_script( 'jquery' );
+		wp_register_script( 'jquery', 'https://code.jquery.com/jquery-2.1.1.min.js', array(), WOOGLE_VERSION, true );
+		wp_enqueue_script( 'jquery' );
+	}
 	// Materialize
 	wp_enqueue_style( 'materialize', $theme_directory . '/css/materialize.min.css', array(), WOOGLE_VERSION );
-	wp_enqueue_script( 'materialize', $theme_directory . '/js/materialize.min.js', array( 'jquery' ), WOOGLE_VERSION );
+	wp_enqueue_script( 'materialize', $theme_directory . '/js/materialize.min.js', array( 'jquery' ), WOOGLE_VERSION, true );
 	// Theme
 	wp_enqueue_style( 'woogle', $theme_directory . '/style.css', array(), WOOGLE_VERSION );
+	wp_enqueue_script( 'woogle', $theme_directory . '/js/scripts.js', array( 'materialize' ), WOOGLE_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'woogle_scripts' );
 
@@ -63,6 +70,11 @@ function woogle_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
 	) );
+	
+	register_nav_menus( array(
+		'left-menu' => __( 'Left Menu', 'woogle' ),
+		'footer-menu' => __( 'Footer Menu', 'woogle' ),
+	) );
 }
 add_action( 'after_setup_theme', 'woogle_setup' );
 
@@ -71,8 +83,8 @@ add_action( 'after_setup_theme', 'woogle_setup' );
  */
 function woogle_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Widget Area', 'woogle' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Left Sidebar', 'woogle' ),
+		'id'            => 'left-sidebar',
 		'description'   => __( 'Add widgets here to appear in your sidebar.', 'woogle' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',

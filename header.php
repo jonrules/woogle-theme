@@ -9,7 +9,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if lt IE 9]>
@@ -19,29 +19,23 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
-
-	<div id="sidebar" class="sidebar">
-		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding">
-				<?php
-					if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif;
-
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; ?></p>
-					<?php endif;
-				?>
-				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
-			</div><!-- .site-branding -->
-		</header><!-- .site-header -->
-
-		<?php get_sidebar(); ?>
-	</div><!-- .sidebar -->
-
-	<div id="content" class="site-content">
+<header id="header">
+	<nav class="top-nav">
+		<div class="container">
+			<div class="nav-wrapper"><a class="page-title"><?php esc_html( bloginfo( 'name' ) ); ?></a></div>
+		</div>
+	</nav>
+	<div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+	<ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
+		<li class="logo">
+			<a id="logo-container" href="<?php echo site_url( '/' ); ?>" class="brand-logo">
+				<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" class="logo-image" />
+			</a>
+		</li>
+		<?php wp_nav_menu( array( 'theme_location' => 'left-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+	</ul>
+	<?php get_sidebar( 'left-sidebar' ); ?>
+</header>
+<main id="main">
+	<div id="content" class="site-content container">
+	

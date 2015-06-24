@@ -12,6 +12,73 @@ Text Domain: woogle
 
 */
 
-.skip-link.screen-reader-text {
-	display: none;
+#header, #main, #footer {
+	padding-left: 240px;
+}
+
+body.admin-bar #header .side-nav.fixed {
+	top: 30px;
+}
+
+nav.top-nav {
+	height: 122px;
+	box-shadow: none;
+}
+
+nav.top-nav a.page-title {
+	line-height: 122px;
+	font-size: 48px;
+}
+
+ul.side-nav.fixed li.logo {
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #ddd;
+}
+
+ul.side-nav.fixed li.logo:hover {
+	background: none;
+}
+
+#logo-container {
+	height: 57px;
+	margin-bottom: 32px;
+}
+
+a.button-collapse.top-nav.full {
+	line-height: 122px;
+}
+
+a.button-collapse.top-nav {
+	position: absolute;
+	text-align: center;
+	height: 48px;
+	width: 48px;
+	left: 7.5%;
+	top: 0;
+	float: none;
+	margin-left: 1.5rem;
+	color: #fff;
+	font-size: 32px;
+	z-index: 2;
+}
+
+body.admin-bar a.button-collapse.top-nav {
+	top: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+	#header, #main, #footer {
+		padding-left: 0;
+	}
+	
+	nav .nav-wrapper {
+		text-align: center;
+	}
+	
+	nav .nav-wrapper a.page-title {
+		font-size: 36px;
+		line-height: 122px;
+	}
 }
