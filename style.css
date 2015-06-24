@@ -11,3 +11,7 @@ Tags: woogle
 Text Domain: woogle
 
 */
+
+.skip-link.screen-reader-text {
+	display: none;
+}
