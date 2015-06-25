@@ -12,12 +12,9 @@ Text Domain: woogle
 
 */
 
-html {
-	margin: 0 !important;
-}
-
 #header, #main, #footer {
 	padding-left: 240px;
+	overflow: hidden;
 }
 
 body.admin-bar #header .side-nav.fixed {
