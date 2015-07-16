@@ -13,6 +13,8 @@ function woogle_scripts() {
 	// Materialize
 	wp_enqueue_style( 'materialize', $theme_directory . '/css/materialize.min.css', array(), WOOGLE_VERSION );
 	wp_enqueue_script( 'materialize', $theme_directory . '/js/materialize.min.js', array( 'jquery' ), WOOGLE_VERSION, true );
+	// Fonts
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), WOOGLE_VERSION );
 	// Theme
 	wp_enqueue_style( 'woogle', $theme_directory . '/style.css', array(), WOOGLE_VERSION );
 	wp_enqueue_script( 'woogle', $theme_directory . '/js/scripts.js', array( 'materialize' ), WOOGLE_VERSION, true );
