@@ -43,8 +43,23 @@ ul.side-nav.fixed li.logo:hover {
 }
 
 #logo-container {
-	height: 57px;
-	margin-bottom: 32px;
+	height: auto;
+	position: relative;
+	display: inline-block;
+}
+
+#logo-container:after {
+	content: ""; 
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left:0;
+}
+
+#logo-container .logo-image {
+	height: auto;
+	width: 100%;
 }
 
 a.button-collapse.top-nav.full {
