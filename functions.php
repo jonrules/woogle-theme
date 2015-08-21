@@ -15,6 +15,10 @@ function woogle_scripts() {
 	wp_enqueue_script( 'materialize', $theme_directory . '/js/materialize.min.js', array( 'jquery' ), WOOGLE_VERSION, true );
 	// Fonts
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), WOOGLE_VERSION );
+	// Animate.css
+	wp_enqueue_style( 'animate-css', $theme_directory . '/css/animate.css', array(), WOOGLE_VERSION );
+	// Scrollspy
+	wp_enqueue_script( 'jquery-scrollspy', $theme_directory . '/js/jquery-scrollspy.js', array( 'jquery' ), WOOGLE_VERSION );
 	// Theme
 	wp_enqueue_style( 'woogle', $theme_directory . '/style.css', array(), WOOGLE_VERSION );
 	wp_enqueue_script( 'woogle', $theme_directory . '/js/scripts.js', array( 'materialize' ), WOOGLE_VERSION, true );
