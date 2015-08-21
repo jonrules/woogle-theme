@@ -24,7 +24,9 @@
 	<ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
 		<li class="logo">
 			<a id="logo-container" href="<?php echo site_url( '/' ); ?>" class="brand-logo">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg" alt="Logo" class="logo-image" />
+				<object type="image/svg+xml" data="<?php echo get_template_directory_uri(); ?>/images/logo.svg" class="svg-logo logo-image">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Logo" class="logo-image" />
+				</object>
 			</a>
 		</li>
 		<?php wp_nav_menu( array( 'theme_location' => 'left-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
