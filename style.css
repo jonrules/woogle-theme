@@ -84,6 +84,22 @@ body.admin-bar a.button-collapse.top-nav {
 	top: 30px;
 }
 
+.stacked-images {
+	position: relative;
+	visibility: hidden;
+}
+
+.stacked-images img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.stacked-images img:first-child {
+	position: relative;
+	visibility: visible;
+}
+
 @media only screen and (max-width: 782px) {
 	body.admin-bar #header .side-nav.fixed {
 		top: 46px;
