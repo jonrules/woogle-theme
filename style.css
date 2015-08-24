@@ -31,6 +31,10 @@ nav.top-nav a.page-title {
 	font-size: 48px;
 }
 
+ul.side-nav {
+	z-index: 10000;
+}
+
 ul.side-nav.fixed li.logo {
 	text-align: center;
 	margin-top: 32px;
