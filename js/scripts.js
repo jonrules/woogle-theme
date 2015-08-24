@@ -1,6 +1,8 @@
 jQuery(function ($) {
         $(".button-collapse").sideNav();
 
+	$('select').material_select();
+
         $('.stacked-images').each(function () {
 		var $images = $(this).find('img');
 		var animateClass = 'animated bounceInDown';
@@ -13,4 +15,10 @@ jQuery(function ($) {
 			i = j;
 		}, 2500);
 	});
+
+	
+	$('.open-materialboxed').click(function () {
+		$($(this).data('target')).click();
+	});
+
 });
