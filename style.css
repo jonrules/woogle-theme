@@ -32,7 +32,7 @@ nav.top-nav a.page-title {
 }
 
 ul.side-nav {
-	z-index: 10000;
+	z-index: 999;
 }
 
 ul.side-nav.fixed li.logo {
