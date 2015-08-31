@@ -34,5 +34,5 @@
 	<?php get_sidebar( 'left-sidebar' ); ?>
 </header>
 <main id="main">
-	<div id="content" class="site-content container">
+	<div id="content" class="site-content <?php if ( ! is_front_page() ) echo 'container'; ?>">
 	
