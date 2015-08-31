@@ -1,6 +1,6 @@
 <?php
 
-define( 'WOOGLE_VERSION', '1.0.0' );
+define( 'WOOGLE_VERSION', '1.0.1' );
 
 function woogle_scripts() {
 	$theme_directory = get_template_directory_uri();

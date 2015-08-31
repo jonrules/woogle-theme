@@ -5,7 +5,7 @@ jQuery(function ($) {
 
         $('.stacked-images').each(function () {
 		var $images = $(this).find('img');
-		var animateClass = 'animated bounceInUp';
+		var animateClass = 'animated bounceInLeft';
 		var i = 0;
         	setInterval(function () {
 			var j = (i + 1) % $images.length;
