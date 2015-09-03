@@ -12,7 +12,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="row">
-	<div class="col s12 m9">
+	<div class="col s12 m8">
 	<?php
 		// Post thumbnail.
 // 		twentyfifteen_post_thumbnail();
@@ -60,7 +60,7 @@
 	</footer><!-- .entry-footer -->
 	</div><!-- .col -->
 
-	<div class="col s12 m3">
+	<div class="col s12 m4">
 		<?php dynamic_sidebar( 'download-sidebar' ); ?>	
 	</div><!-- .col -->
 

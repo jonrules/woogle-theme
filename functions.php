@@ -102,13 +102,15 @@ function woogle_widgets_init() {
                 'name'          => __( 'Download Sidebar', 'woogle' ),
                 'id'            => 'download-sidebar',
                 'description'   => __( 'Add widgets here to appear in your download page sidebar.', 'woogle' ),
-                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-                'after_widget'  => '</aside>',
-                'before_title'  => '<h2 class="widget-title">',
-                'after_title'   => '</h2>',
+                'before_widget' => '<aside id="%1$s" class="widget %2$s card blue white-text"><div class="card-content">',
+                'after_widget'  => '</div></aside>',
+                'before_title'  => '<span class="widget-title card-title">',
+                'after_title'   => '</span>',
         ) );
 }
 add_action( 'widgets_init', 'woogle_widgets_init' );
+
+add_filter( 'widget_text', 'do_shortcode' );
 
 function woogle_mime_types( $mimes ) {
 	$mimes['svg'] = 'image/svg+xml';
