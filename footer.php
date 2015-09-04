@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="row white-text">
 			<div class="col s12">
-				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
+				<?php strip_tags( wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => '', 'items_wrap' => '%3$s', 'echo' => false ) ), '<a>' ); ?>
 			</div>
 		</div>
 	</div>
