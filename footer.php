@@ -13,12 +13,8 @@
 <footer id="footer" class="page-footer">
 	<div class="container">
 		<div class="row white-text">
-			<div class="col l6 s12">
-				<!-- <h5 class="white-text">Footer Content</h5> 
-				<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>  -->
-			</div>
-			<div class="col l4 offset-l2 s12">
-				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
+			<div class="col s12">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'container' => '', 'items_wrap' => '%3$s' ) ); ?>
 			</div>
 		</div>
 	</div>
